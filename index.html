@@ -23,18 +23,23 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 55px;
+      gap: 15px;
     }
 
     .logo-container img {
-      width: 85px;
-      height: 85px;
+      width: 75px;
+      height: 75px;
       object-fit: cover;
-      border-radius: 12px;
-      padding: 5px;
+      border-radius: 14px;
+      padding: 6px;
       background: #0f172a;
-      box-shadow: 0 0 8px rgba(56,189,248,0.6);
+      box-shadow: 0 0 10px rgba(56,189,248,0.7);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .logo-container img:hover {
+      transform: scale(1.12);
+      box-shadow: 0 0 18px rgba(56,189,248,1);
     }
 
     .logo-container img:hover {
