@@ -19,6 +19,19 @@
       border-bottom: 2px solid #38bdf8;
     }
 
+    .logo-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .logo-container img {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+    }
+
     header h1 {
       margin: 0;
       color: #38bdf8;
@@ -108,8 +121,10 @@
 <body>
 
   <header>
-    <h1>CESA Games</h1>
-    <img src="Logo.jpeg" alt="Logo Projeto">
+    <div class="logo-container">
+      <img src="Logo.jpeg" alt="Logo Projeto">
+      <h1>CESA Games</h1>
+    </div>
 
     <nav>
       <a href="#">Início</a>
@@ -156,4 +171,3 @@
 
 </body>
 </html>
-
