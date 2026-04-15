@@ -1,68 +1,157 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CESA GAMES</title>
-    <style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CESA Games</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+    }
 
-        header{
-            background-color: white;
-            justify-content:center;
-        }
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #2D0B43;
-            margin: 0;
-        }
-        .container {
-            text-align: center;
-            padding: 2rem;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            background-color: #4285F4;
-            color: white;
-            border: none;
-            border-radius: 5px;
-        }
-        button:hover {
-            background-color: #357ae8;
-        }
-    </style>
+    header {
+      background: #020617;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 2px solid #38bdf8;
+    }
+
+    header h1 {
+      margin: 0;
+      color: #38bdf8;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: #e2e8f0;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #38bdf8;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      max-width: 600px;
+      margin: auto;
+      color: #94a3b8;
+    }
+
+    .games {
+      padding: 40px 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #020617;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #38bdf8;
+    }
+
+    .card p {
+      color: #94a3b8;
+    }
+
+    .card a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 15px;
+      background: #38bdf8;
+      color: #020617;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      border-top: 1px solid #334155;
+      margin-top: 40px;
+      color: #94a3b8;
+    }
+  </style>
 </head>
 <body>
-    <header>
-    <h1>CESA GAMES</h1>
-    <nav>
-        <ul>
-            <li><a href="#">Início</a></li>
-            <li><a href="#">Sobre</a></li>
-        </ul>
-    </nav>
-    </header>
 
-    <div class="container">
-        <p>O cesa games veio com o intuito de ensinar se divertindo
-            jogos com cunho pedagogico ou para melhorar a vida dos alunos e da comunidade externa.
-        </p>
-        <button id="meuBotao">Clique em mim</button>
-        <p id="mensagem"></p>
+  <header>
+    <h1>CESA Games</h1>
+    <nav>
+      <a href="#">Início</a>
+      <a href="#games">Jogos</a>
+      <a href="#sobre">Sobre</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Jogos Educacionais Interativos</h2>
+    <p>Explore projetos desenvolvidos com Pygame, Godot e outras tecnologias para aprendizado divertido.</p>
+  </section>
+
+  <section id="games" class="games">
+
+    <div class="card">
+      <h3>Jogo em Pygame</h3>
+      <p>Exemplo de jogo educacional feito em Python usando Pygame.</p>
+      <a href="#">Abrir</a>
     </div>
 
-    <script>
-        document.getElementById('meuBotao').addEventListener('click', function() {
-            document.getElementById('mensagem').innerText = 'Código HTML testado com sucesso!';
-        });
-    </script>
+    <div class="card">
+      <h3>Jogo em Godot</h3>
+      <p>Projeto interativo desenvolvido com a engine Godot.</p>
+      <a href="#">Abrir</a>
+    </div>
+
+    <div class="card">
+      <h3>Novo Projeto</h3>
+      <p>Adicione aqui novos jogos educativos.</p>
+      <a href="#">Abrir</a>
+    </div>
+
+  </section>
+
+  <section id="sobre" class="hero">
+    <h2>Sobre o Projeto</h2>
+    <p>O CESA Games é uma plataforma para disponibilizar jogos educacionais criados por estudantes e professores.</p>
+  </section>
+
+  <footer>
+    <p>© 2026 CESA Games - Todos os direitos reservados</p>
+  </footer>
+
 </body>
 </html>
+
